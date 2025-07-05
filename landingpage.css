@@ -1,0 +1,792 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-size: 0.8rem;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  z-index: 999;
+  height: 100px;
+  position: relative;
+}
+nav .wrapper {
+  max-width: 1250px;
+  padding: 0 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.span {
+  color: red;
+}
+.wrapper .nav-links {
+  display: inline-flex;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.nav-links li {
+  list-style-type: none;
+}
+.nav-links li a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 9px 15px;
+}
+.nav-links li a:hover {
+  color: red;
+}
+.wrapper .btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+}
+.input {
+  display: none;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Content section styling */
+section:nth-child(2) {
+  padding-top: 70px;
+  text-align: center;
+}
+section:nth-child(2) h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+.food {
+  animation: slideInTop 1s ease;
+}
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.food-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.food-1 {
+  font-size: 1rem;
+  text-align: center;
+  animation: slideInBottom 1s ease;
+}
+.section-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.section-container img {
+  height: 400px;
+  object-fit: cover;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+.content-1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  animation: slideInTop 1s ease;
+}
+.content-2 {
+  font-size: 0.8rem;
+  animation: slideInBottom 1s ease;
+}
+.content-container-2 {
+  display: none;
+}
+.overall-category-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 50px;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  min-width: 400px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 50px;
+  animation: moveLeft 10s linear infinite;
+  will-change: transform;
+  width: max-content;
+  z-index: 1;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(7%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track::after {
+  content: "";
+  display: flex;
+  gap: 50px;
+}
+.mini-category-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.image-container img {
+  height: 200px;
+}
+.category-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category {
+  margin: 0;
+}
+.steak-content {
+  font-size: 0.7rem;
+  width: 400px;
+  text-align: center;
+}
+
+.mini-category-container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 45px;
+}
+.image-container-1 img {
+  height: 150px;
+}
+.category-container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category {
+  margin: 0;
+}
+.sides-content {
+  font-size: 0.7rem;
+  width: 400px;
+  text-align: center;
+}
+.mini-category-container-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+}
+.image-container-2 img {
+  height: 180px;
+}
+.desserts-content {
+  font-size: 0.7rem;
+  width: 400px;
+  text-align: center;
+}
+.category-container-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.category-container-2 p {
+  padding: 5px;
+}
+.image-container-3 img {
+  height: 190px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+.button-1 {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+.button-1:hover {
+  background-color: red;
+  color: white;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.img-container img {
+  border-radius: 10px;
+  height: 300px;
+  width: 800px;
+  object-fit: cover;
+}
+.type-container{
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.overall-product-section-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+.overall-product-container {
+  width: 240px;
+  height: 490px;
+  background-color: #d0d0cf;
+  border-radius: 10px;
+}
+.mini-product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  color: black;
+}
+.img-container-1 img {
+  height: 160px;
+  width: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.catering-service-container {
+  width: 220px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.catering-service-container h3 {
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 0.8rem;
+  margin: 0;
+}
+.catering-service-container p {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin: 0;
+  font-size: 0.7rem;
+  width: 200px;
+}
+.btn-1-container {
+  padding-top: 20px;
+  padding-left: 40px;
+}
+.btn-1 {
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid red;
+  background-color: inherit;
+  color: red;
+}
+.btn-1:hover {
+  border: none;
+  background-color: red;
+  color: white;
+}
+.mini-product-container-1{
+    display: flex;
+    gap: 20px;
+}
+.mini-product-container-2{
+    display: flex;
+    gap: 20px;
+}
+.overall-profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-chef-spotlight-container{
+    width: 900px;
+    height: 700px;
+    background-color: white;
+    border-radius: 10px;
+}
+.chef-spotlight-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+.chef-spotlight-image-container img{
+    width: 350px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.Profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   
+}
+.profile h1{
+    color: black;
+    margin: 0;
+    padding-top: 10px;
+}
+.title{
+    color: black;
+    margin: 0;
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+}
+
+.profile p{
+    font-size: 0.7rem;
+    width: 400px;
+     color: black;
+     margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 970px) {
+  .wrapper .btn {
+    display: block;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    background-color: red;
+    display: block;
+    top: 0;
+    left: -100%;
+    line-height: 70px;
+    padding: 50px 20px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  #menuBtn:checked ~ .nav-links {
+    left: 0%;
+  }
+  .nav-links li a {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .nav-links li a:hover {
+    color: inherit;
+  }
+  .button {
+    background-color: black;
+    color: white;
+  }
+  .section-container {
+    flex-direction: column;
+  }
+  .section-container img {
+    display: none;
+  }
+  .food-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section:nth-child(2) h1 {
+    font-size: 3rem;
+  }
+  .img-container img {
+    width: 650px;
+  }
+    .category-container button {
+    width: 75px;
+    height: 40px;
+    font-size: 0.6rem;
+    background-color: red;
+    color: white;
+  }
+  .category-container-1 button {
+    width: 75px;
+    height: 40px;
+    font-size: 0.6rem;
+    background-color: red;
+    color: white;
+  }
+  .category-container-2 button {
+    width: 75px;
+    height: 40px;
+    font-size: 0.6rem;
+    background-color: red;
+    color: white;
+  }
+     .overall-product-section-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .mini-product-container-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .mini-product-container-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .main-chef-spotlight-container{
+    width: 700px;
+    height: 710px;
+  }
+.chef-spotlight-container{
+  gap: 20px;
+}
+  .chef-spotlight-image-container img {
+    width: 300px;
+  }
+  .profile p{
+    font-size: 0.6rem;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .logo a {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 280px;
+    z-index: 1000;
+  }
+  nav .wrapper {
+    padding: 10px 20px;
+  }
+  .wrapper .btn {
+    font-size: 1.2rem;
+  }
+  section:nth-child(2) h1 {
+    font-size: 2rem;
+  }
+  section:nth-child(2) {
+    padding-top: 50px;
+    text-align: center;
+  }
+  section:nth-child(2) h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .food-1 {
+    font-size: 0.6rem;
+  }
+  .image-container img {
+    height: 150px;
+  }
+  .category {
+    font-size: 0.8rem;
+  }
+  .steak-content {
+    font-size: 0.6rem;
+    width: 250px;
+  }
+  .overall-category-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .category-container button {
+    width: 75px;
+    height: 40px;
+    font-size: 0.6rem;
+    background-color: red;
+    color: white;
+  }
+
+  .image-container-1 img {
+    height: 80px;
+  }
+  .sides-content {
+    font-size: 0.6rem;
+    width: 250px;
+    text-align: center;
+  }
+  .category-container-1 button {
+    width: 75px;
+    height: 40px;
+    font-size: 0.6rem;
+    background-color: red;
+    color: white;
+  }
+  .image-container-2 img {
+    height: 120px;
+  }
+  .desserts-content {
+    font-size: 0.6rem;
+    width: 250px;
+  }
+  .category-container-2 button {
+    width: 75px;
+    height: 40px;
+    font-size: 0.6rem;
+    background-color: red;
+    color: white;
+  }
+  .image-container-3 img {
+    height: 175px;
+  }
+  .content-container {
+    display: none;
+  }
+  .content-container-2 {
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+    justify-content: center;
+  }
+  .mini-content-1 {
+    font-size: 2rem;
+    width: 250px;
+    text-align: center;
+    margin: 0;
+    line-height: normal;
+    padding-left: 80px;
+  }
+  .mini-content-2 {
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-container img {
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    animation: none;
+  }
+  .overall-product-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mini-product-container-1{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mini-product-container-2{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .overall-product-container {
+  width: 240px;
+  height: 490px;
+}
+  .img-container-1 img {
+  height: 160px;
+  width: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.catering-service-container {
+  width: 220px;
+  height: 300px;
+  background-color: white;
+}
+.products {
+    padding-left: 55px;
+    padding-top: 35px;
+}
+    .main-chef-spotlight-container{
+    width: 400px;
+    height: auto;
+  }
+.chef-spotlight-container{
+  flex-direction: column;
+}
+  .chef-spotlight-image-container img {
+    width: 300px;
+    height: 400px;
+  }
+  .profile h1{
+    font-size: 0.8rem;
+  }
+  .title{
+    font-size: 0.6rem;
+  }
+  .profile p{
+    font-size: 0.6rem;
+    width: 320px;
+  }
+  .span-2{
+    display: none;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .food-1 {
+    font-size: 0.5rem;
+  }
+  .mini-content-1 {
+    padding-left: 35px;
+  }
+  .carousel-container{
+    overflow: hidden;
+  }
+    .main-chef-spotlight-container{
+    width: 300px;
+    height: auto;
+  }
+    .chef-spotlight-image-container img {
+    width: 250px;
+    height: 300px;
+  }
+   .profile p{
+    font-size: 0.5rem;
+    width: 250px;
+  }
+}
+@media (max-width: 380px) and (min-width: 360px) {
+  .mini-content-1 {
+    padding-left: 70px;
+  }
+  .carousel-container {
+    overflow: none;
+  }
+}
