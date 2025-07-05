@@ -592,7 +592,7 @@ section:nth-child(2) h1 {
     margin: 0;
   }
   .food-1 {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .image-container img {
     height: 150px;
@@ -601,7 +601,7 @@ section:nth-child(2) h1 {
     font-size: 0.8rem;
   }
   .steak-content {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     width: 250px;
   }
   .overall-category-container {
@@ -613,7 +613,7 @@ section:nth-child(2) h1 {
   .category-container button {
     width: 75px;
     height: 40px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     background-color: red;
     color: white;
   }
@@ -622,14 +622,14 @@ section:nth-child(2) h1 {
     height: 80px;
   }
   .sides-content {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     width: 250px;
     text-align: center;
   }
   .category-container-1 button {
     width: 75px;
     height: 40px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     background-color: red;
     color: white;
   }
@@ -637,13 +637,13 @@ section:nth-child(2) h1 {
     height: 120px;
   }
   .desserts-content {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     width: 250px;
   }
   .category-container-2 button {
     width: 75px;
     height: 40px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     background-color: red;
     color: white;
   }
@@ -668,7 +668,7 @@ section:nth-child(2) h1 {
     padding-left: 80px;
   }
   .mini-content-2 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-align: center;
     margin: 0;
     padding-top: 15px;
@@ -744,13 +744,13 @@ section:nth-child(2) h1 {
     height: 400px;
   }
   .profile h1{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .title{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .profile p{
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     width: 320px;
   }
   .span-2{
@@ -761,7 +761,7 @@ section:nth-child(2) h1 {
 
 @media (max-width: 400px) {
   .food-1 {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
   .mini-content-1 {
     padding-left: 35px;
@@ -778,7 +778,7 @@ section:nth-child(2) h1 {
     height: 300px;
   }
    .profile p{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     width: 250px;
   }
 }
