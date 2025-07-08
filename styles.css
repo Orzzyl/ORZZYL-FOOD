@@ -881,7 +881,7 @@ section:nth-child(2) h1 {
     display: none;
   }
 .main-overall-footer-section-container{
-  padding-top: 140px;
+  padding-top: 100px;
   padding-bottom: 20px;
 }
   .overall-footer-section-container{
@@ -889,8 +889,9 @@ section:nth-child(2) h1 {
     height: 1500px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
+    gap: 5px;
+
   }
   .contact{
     display: flex;
