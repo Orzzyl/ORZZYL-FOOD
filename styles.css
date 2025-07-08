@@ -442,6 +442,7 @@ section:nth-child(2) h1 {
 }
 .main-overall-footer-section-container{
   padding-top: 140px;
+  padding-bottom: 20px;
 }
 .overall-footer-section-container{
   display: flex;
@@ -454,6 +455,12 @@ section:nth-child(2) h1 {
   height: 570px;
   padding-left: 20px;
   padding-right: 20px;
+}
+.location-and-company-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 150px;
 }
  .company ul{
   list-style-type: none;
@@ -527,6 +534,10 @@ section:nth-child(2) h1 {
   height: 30px;
 }
 
+.copyright{
+  text-align: center;
+  padding-top: 20px;
+}
 
 
 
@@ -647,7 +658,10 @@ section:nth-child(2) h1 {
     width: 300px;
   }
   .overall-footer-section-container{
-    gap: 100px;
+    gap: 35px;
+  }
+  .location-and-company-container{
+    gap: 30px;
   }
 }
 
@@ -866,10 +880,13 @@ section:nth-child(2) h1 {
   .span-2{
     display: none;
   }
-
+.main-overall-footer-section-container{
+  padding-top: 140px;
+  padding-bottom: 20px;
+}
   .overall-footer-section-container{
     flex-direction: column;
-    height: auto;
+    height: 1500px;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -879,6 +896,29 @@ section:nth-child(2) h1 {
     flex-direction: column;
     
   }
+  .location-and-company-container h1{
+  font-size: 0.8rem;
+}
+.location-and-company-container{
+  display: flex;
+  gap: 40px;
+
+}
+.stay-connected{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.button-2{
+  width: 100px;
+  height: 40px;
+}
+.social-media{
+  padding-top: 30px;
+}
 }
 
 @media (max-width: 400px) {
