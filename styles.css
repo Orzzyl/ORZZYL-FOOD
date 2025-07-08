@@ -440,9 +440,44 @@ section:nth-child(2) h1 {
      color: black;
      margin: 0;
 }
+.main-overall-footer-section-container{
+  padding-top: 140px;
+}
+.overall-footer-section-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;
+  padding-top: 70px;
+  background-color: red;
+  height: 570px;
+}
+ .company ul{
+  list-style-type: none;
+  padding: 0;
+ }
+ .company li{
+  padding-top: 20px;
+ }
+.company a{
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+}
 
-
-
+ .location ul{
+  list-style-type: none;
+  padding: 0;
+ }
+ .location li{
+  padding-top: 20px;
+ }
+.location a{
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+}
 
 
 
@@ -563,6 +598,9 @@ section:nth-child(2) h1 {
   .profile p{
     font-size: 0.6rem;
     width: 300px;
+  }
+  .overall-footer-section-container{
+    gap: 100px;
   }
 }
 
@@ -782,6 +820,18 @@ section:nth-child(2) h1 {
     display: none;
   }
 
+  .overall-footer-section-container{
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+    
+  }
 }
 
 @media (max-width: 400px) {
