@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orzzyl Food</title>
+    <link rel="stylesheet" href="restaurant.css">
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+</head>
+<body>
+    <section>
+      <nav class="navigationbar-container">
+        <div class="wrapper">
+          <div class="logo">
+            <a href="index.html"><span class="span">ORZZYL</span></a>
+          </div>
+          <input class="input" type="radio" name="slide" id="menuBtn" />
+          <input class="input" type="radio" name="slide" id="cancelBtn" />
+          <ul class="nav-links">
+            <label for="cancelBtn" class="btn cancel-btn"
+              ><i class="fa-solid fa-xmark"></i
+            ></label>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About OF</a></li>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Reservation</a></li>
+            
+          </ul>
+          <label for="menuBtn" class="btn menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        </div>
+      </nav>
+    </section>
+
+<section class="introduction-container">
+    <div class="introduction-content-container">
+        <div class="introduction-1">
+        <h1 class="introduction">Welcome to <br><span class="span">Orzzyl</span>  Restaurant</h1>
+        <button type="button" class="button-1">Reservation</button>
+        </div>
+        <div class="introduction-image-container wobble">
+            <img src="pngwing.com (7).png" alt="">
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="overall-room-section-container">
+<div class="slideshow-container">
+<section class="rooms-container slide">
+    <div>
+        <img src="regularroom1.jpeg" alt="" class="image-3">
+    </div>
+    <div class="text-overlay">
+        <h1>REGULAR ROOM 1</h1>
+        <p>Where comfort meets culinary delight. Whether you're stopping by for a quick lunch, a casual 
+            dinner, or a relaxing weekend meal, this space offers a warm and inviting atmosphere for everyday dining.</p>
+            <button type="button" class="button-2">Make Reservation</button>
+    </div>
+
+</section>
+
+
+    
+<section class="rooms-container slide">
+    <div>
+        <img src="regularroom2.jpeg" alt="" class="image-3">
+    </div>
+    <div class="text-overlay">
+        <h1>REGULAR ROOM 2</h1>
+        <p>Where comfort meets culinary delight. Whether you're stopping by for a quick lunch, a casual 
+            dinner, or a relaxing weekend meal, this space offers a warm and inviting atmosphere for everyday dining.</p>
+            <button type="button" class="button-2">Make Reservation</button>
+    </div>
+
+</section>
+
+
+<section class="rooms-container slide">
+    <div>
+        <img src="viproom1.jpeg" alt="" class="image-3">
+    </div>
+    <div class="text-overlay">
+        <h1>VIP ROOM 1</h1>
+        <p>Designed for guests who desire a more refined dining experience.
+         This private space offers discreet service, luxurious ambiance, and personalized attention to detail.</p>
+            <button type="button" class="button-2">Make Reservation</button>
+    </div>
+
+</section>
+
+
+<section class="rooms-container slide">
+    <div>
+        <img src="viproom2.jpeg" alt="" class="image-3">
+    </div>
+    <div class="text-overlay">
+        <h1>VIP ROOM 2</h1>
+        <p>Designed for guests who desire a more refined dining experience. 
+            This private space offers discreet service, luxurious ambiance, and personalized attention to detail.</p>
+            <button type="button" class="button-2">Make Reservation</button>
+    </div>
+
+</section>
+
+
+<section class="rooms-container slide">
+    <div>
+        <img src="eventhall1.jpeg" alt="" class="image-3">
+    </div>
+    <div class="text-overlay">
+        <h1>EVENT HALL 1</h1>
+        <p>From intimate celebrations to grand occasions. With flexible space configurations, elegant décor,
+             and professional service, we accommodate weddings, birthdays, corporate meetings, product launches, and more.</p>
+            <button type="button" class="button-2">Make Reservation</button>
+    </div>
+
+</section>
+
+
+<section class="rooms-container slide">
+    <div>
+        <img src="eventhall2.jpeg" alt="" class="image-3">
+    </div>
+    <div class="text-overlay">
+        <h1>EVENT HALL 2</h1>
+        <p>From intimate celebrations to grand occasions. With flexible space configurations, elegant décor,
+             and professional service, we accommodate weddings, birthdays, corporate meetings, product launches, and more.</p>
+            <button type="button" class="button-2">Make Reservation</button>
+    </div>
+
+</section>
+</div>
+ <!-- <a class="prev" onclick="changeSlide(-1)">❮</a> -->
+  <!-- <a class="next" onclick="changeSlide(1)">❯</a> -->
+</section>
+
+
+<section class="overall-discover-container">
+    <div class="discover-container">
+        <p>Discover</p>
+        <h1>Our Delicious Story</h1>
+        <p class="discover">Orzzyl is more than a restaurant, It is a haven of timeless elegance where culinary mastery meets refined indulgence. Here, every dish is a curated
+             experience of luxury, crafted to enchant the senses and leave a lasting impression of pure sophistication.
+        </p>
+
+        <div class="division">
+             <a href="">Reserve your Table</a>
+        </div>
+       
+    </div>
+
+    <div>
+        <img src="regularroom3.jpeg" alt="" class="image-4">
+    </div>
+    
+</section>
+
+
+
+
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.style.display = 'none');
+    slides[index].style.display = 'block';
+  }
+
+  function changeSlide(direction) {
+    currentIndex = (currentIndex + direction + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function autoPlay() {
+    changeSlide(1);
+  }
+
+  // Start
+  showSlide(currentIndex);
+  setInterval(autoPlay, 5000); // Auto-slide every 5 seconds
+</script>
+</body>
+</html>
