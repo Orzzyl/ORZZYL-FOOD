@@ -287,6 +287,65 @@ i{
   object-fit: cover;
   border-radius: 5px;
 }
+.overall-menu-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  gap: 120px;
+}
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.menu-container p, h1{
+  margin: 0;
+  padding: 5px;
+}
+.menu-container p{
+  font-size: 0.9rem;
+}
+.menu-container h1{
+  font-size: 1.3rem;
+}
+.discover-1{
+  width: 600px;
+  font-size: 0.8rem;
+}
+
+
+.view-menu-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.image-5{
+  height: 400px;
+}
+.image-6{
+  height: 500px;
+}
+.button-3{
+  background-color: inherit;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border: double;
+  border-radius: 5px;
+}
+.wiggling img {
+    animation: wobble 2s ease-in-out infinite;
+}
+
+@keyframes wiggling {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
 
 
 
@@ -340,6 +399,38 @@ i{
 .image-4{
   width: 350px;
 }
+.discover-1{
+  width: 540px;
+}
+.overall-menu-container{
+  gap: 70px;
+}
+.menu-container h1{
+  font-size: 1rem;
+}
+.main-overall-view-menu-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.view-menu-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.view-menu-container-1{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.view-menu-container-2{
+  flex-direction: column-reverse;
+}
 }
 
 @media screen and (max-width: 500px) {
@@ -367,6 +458,9 @@ i{
   .introduction{
     font-size: 2rem;
   }
+  .wobble img{
+    height: 280px;
+  }
   .overall-room-section-container
  {
     padding-top: 50px;
@@ -377,7 +471,28 @@ i{
     flex-direction: column;
     padding: 20px;
   }
-  
+  .overall-menu-container{
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .discover-1{
+    width: 400px;
+  }
+  .image-5{
+    height: 250px;
+  }
+  .image-6{
+    height: 350px;
+  }
+  .fabulous p{
+    font-size:0.7rem;
+    width: 280px;
+  }
+  .main-overall-view-menu-container{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -390,5 +505,11 @@ i{
  }
  .image-4{
   width: 300px;
+ }
+ .discover-1{
+  width: 300px;
+ }
+ .introduction{
+  font-size: 1.5rem;
  }
 }
