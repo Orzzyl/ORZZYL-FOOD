@@ -193,6 +193,7 @@ i{
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
+    padding-bottom: 30px;
 }
 .team-container{
     display: flex;
@@ -254,6 +255,106 @@ i{
   gap: 50px;
 }
 
+.main-overall-footer-section-container{
+  padding-top: 140px;
+  padding-bottom: 20px;
+}
+.overall-footer-section-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;
+  padding-top: 70px;
+  background-color: black;
+  color: white;
+  height: 570px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.location-and-company-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 150px;
+}
+ .company ul{
+  list-style-type: none;
+  padding: 0;
+ }
+ .company li{
+  padding-top: 20px;
+ }
+.company a{
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+}
+
+ .location ul{
+  list-style-type: none;
+  padding: 0;
+ }
+ .location li{
+  padding-top: 20px;
+ }
+.location a{
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+}
+.image-1-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.images-1-container{
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+.email-input{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+}
+.button-2-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.button-2{
+  border: none;
+  border-radius: 40px;
+  background-color: red;
+  color: white;
+  width: 120px;
+  height: 50px;
+}
+.button-2:hover{
+  background-color: rgb(243, 115, 115);
+
+}
+.images-1-container:hover{
+  background-color: rgb(243, 115, 115);
+}
+.image-1{
+  height: 20px;
+}
+.image-2{
+  height: 30px;
+}
+
+.copyright{
+  text-align: center;
+  padding-top: 20px;
+}
+
 
 
 
@@ -292,6 +393,12 @@ i{
   .startup-content-container{
     flex-wrap: wrap;
   }
+    .overall-footer-section-container{
+    gap: 35px;
+  }
+  .location-and-company-container{
+    gap: 30px;
+  }
 }
 
 
@@ -326,6 +433,12 @@ i{
   .mission-content-container{
     height: 500px;
   }
+  .mission-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .mission-content h1{
     font-size: 1rem;
  
@@ -343,6 +456,11 @@ i{
   }
   .passion-container h1{
     font-size: 1rem;
+  }
+  .overall-footer-section-container{
+    flex-wrap: wrap;
+    height: auto;
+    padding-bottom: 20px;
   }
 }
 
