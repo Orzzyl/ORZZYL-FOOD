@@ -328,6 +328,18 @@ i{
   i{
     color: white;
 }
+.overall-room-section-container{
+  padding: 20px;
+}
+.overall-discover-container{
+  gap: 30px;
+}
+.discover{
+  width: 350px;
+}
+.image-4{
+  width: 350px;
+}
 }
 
 @media screen and (max-width: 500px) {
@@ -352,11 +364,31 @@ i{
   .wrapper .btn {
     font-size: 1.2rem;
   }
+  .introduction{
+    font-size: 2rem;
+  }
+  .overall-room-section-container
+ {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .overall-discover-container{
+    flex-direction: column;
+    padding: 20px;
+  }
+  
 }
 
 @media screen and (max-width: 400px) {
      nav .wrapper{
     gap: 200px;
       padding: 10px 20px;
+ }
+ .discover{
+  width: 300px;
+ }
+ .image-4{
+  width: 300px;
  }
 }
