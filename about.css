@@ -1,0 +1,354 @@
+body {
+  font-size: 0.8rem;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  width: 100%;
+  z-index: 999;
+  height: 100px;
+  position: relative;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+nav .wrapper {
+  max-width: 1250px;
+  padding: 0 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 300px;
+}
+.wrapper .logo a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.span {
+  color: red;
+}
+.wrapper .nav-links {
+  display: inline-flex;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.nav-links li {
+  list-style-type: none;
+}
+.nav-links li a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 9px 15px;
+}
+.nav-links li a:hover {
+  color: red;
+}
+.wrapper .btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+}
+.input {
+  display: none;
+}
+i{
+    color: white;
+}
+.inspo-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+.inspo{
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 0;
+      animation: slideInTop 1s ease;
+}
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.inspo-1{
+    text-align: center;
+    width: 500px;
+    animation: slideInBottom 1s ease;
+}
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.overall-mission-content-container{
+    padding-top: 90px;
+}
+
+.mission-content-container{
+    background-color: black;
+    height: 380px;
+}
+.mission-content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.mission-content h1{
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px;
+}
+.mission-content p{
+    width: 700px;
+    text-align: center;
+}
+
+.path-content{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.startup-content-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.startup-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.startup-image{
+    height: 400px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.info-1{
+    color: red;
+    margin: 0;
+    padding-top: 5px;
+}
+.title-1{
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+}
+.info-2{
+    width: 250px;
+    margin: 0;
+    font-size: 0.7rem;
+}
+.passion-container{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.passion-container h1{
+    font-size: 1.5rem;
+}
+.overall-team-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.team-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team-image{
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: solid;
+    color: red;
+}
+.team-name{
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 5px;
+}
+.post{
+    margin: 0;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  min-width: 400px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 50px;
+  animation: moveLeft 10s linear infinite;
+  will-change: transform;
+  width: max-content;
+  z-index: 1;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(7%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track::after {
+  content: "";
+  display: flex;
+  gap: 50px;
+}
+
+
+
+
+
+@media screen and (max-width: 970px) {
+  .wrapper .btn {
+    display: block;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    background-color: red;
+    display: block;
+    top: 0;
+    left: -100%;
+    line-height: 70px;
+    padding: 50px 20px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  #menuBtn:checked ~ .nav-links {
+    left: 0%;
+  }
+  .nav-links li a {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .nav-links li a:hover {
+    color: inherit;
+  }
+  .startup-content-container{
+    flex-wrap: wrap;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+ nav .wrapper{
+    gap: 215px;
+      padding: 10px 20px;
+ }
+  
+  .wrapper .logo a {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 280px;
+    z-index: 1000;
+  }
+  .wrapper .btn {
+    font-size: 1.2rem;
+  }
+  .inspo{
+    font-size: 1.5rem;
+  }
+  .inspo-1{
+    width: 300px;
+  }
+  .mission-content-container{
+    height: 500px;
+  }
+  .mission-content h1{
+    font-size: 1rem;
+ 
+  }
+  .mission-content p{
+       width: 300px;
+  }
+  .path-content h1{
+    font-size: 1rem;
+  }
+  .startup-content-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .passion-container h1{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+     nav .wrapper{
+    gap: 115px;
+      padding: 10px 20px;
+ }
+}
