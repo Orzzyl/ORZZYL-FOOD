@@ -287,6 +287,9 @@ i{
   object-fit: cover;
   border-radius: 5px;
 }
+.main-overall-view-menu-container{
+  padding-bottom: 30px;
+}
 .overall-menu-container{
   display: flex;
   justify-content: center;
@@ -346,8 +349,58 @@ i{
     25% { transform: rotate(-5deg); }
     75% { transform: rotate(5deg); }
 }
-
-
+.reservation-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  justify-content: center;
+  background-color: black;
+  height: auto;
+  
+}
+.reserve{
+  font-size: 1rem;
+  font-weight: 100;
+}
+.book{
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.inputs-content-container input{
+  background-color: inherit;
+  color: white;
+  width: 500px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px;
+  border: solid, 2px;
+  
+}
+.input-container input{
+  width: 225px;
+}
+input::placeholder{
+  font-size: 0.7rem;
+  padding: 20px;
+  color: white;
+}
+.inputs-content-container button{
+  width: 200px;
+  height: 40px;
+  background-color: inherit;
+  color: white;
+  border-radius: 10px;
+  border: solid 2px;
+}
+.button-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 @media screen and (max-width: 970px) {
      nav .wrapper{
@@ -493,11 +546,23 @@ i{
   .main-overall-view-menu-container{
     text-align: center;
   }
+  .inputs-content-container input{
+    width: 280px;
+    margin: 10px;
+  }
+  .inputs-content-container button{
+  width: 120px;
+}
+.input-container input{
+  width: 125px;
+
+  
+}
 }
 
 @media screen and (max-width: 400px) {
      nav .wrapper{
-    gap: 200px;
+    gap: 250px;
       padding: 10px 20px;
  }
  .discover{
