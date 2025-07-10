@@ -3,6 +3,9 @@ body {
   font-family: "poppins", sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 nav {
   width: 100%;
@@ -71,189 +74,145 @@ nav .wrapper {
 i{
     color: white;
 }
-.inspo-content-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.customer{
+    text-align: center;
+    font-size: 3rem;
     padding-top: 70px;
-}
-.inspo{
-    font-size: 3.5rem;
-    text-align: center;
     margin: 0;
-      animation: slideInTop 1s ease;
 }
-@keyframes slideInTop {
-  from {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.inspo-1{
+.greetings{
     text-align: center;
-    width: 500px;
-    animation: slideInBottom 1s ease;
-}
-@keyframes slideInBottom {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-.overall-mission-content-container{
-    padding-top: 90px;
-}
-
-.mission-content-container{
-    background-color: black;
-    height: 380px;
-}
-.mission-content{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    justify-content: center;
-    align-items: center;
-}
-.mission-content h1{
-    font-size: 2rem;
-    margin: 0;
-    padding: 10px;
-}
-.mission-content p{
-    width: 700px;
-    text-align: center;
-}
-
-.path-content{
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 30px;
-}
-.startup-content-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.startup-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.startup-image{
-    height: 400px;
-    width: 250px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.info-1{
-    color: red;
-    margin: 0;
-    padding-top: 5px;
-}
-.title-1{
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
     font-size: 1rem;
 }
-.info-2{
-    width: 250px;
-    margin: 0;
-    font-size: 0.7rem;
-}
-.passion-container{
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-.passion-container h1{
-    font-size: 1.5rem;
-}
-.overall-team-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    padding-bottom: 30px;
-}
-.team-container{
+.overall-feedback-section-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
 }
-.team-image{
-    height: 180px;
-    width: 180px;
-    border-radius: 100%;
-    object-fit: cover;
-    border: solid;
-    color: red;
+.rating-group{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 30px;
 }
-.team-name{
-    font-size: 0.8rem;
-    margin: 0;
-    padding: 5px;
-}
-.post{
-    margin: 0;
-}
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  min-width: 400px;
+.rating-group label{
+    font-weight: 600;
+
 }
 
-.carousel-track {
-  display: flex;
-  gap: 50px;
-  animation: moveLeft 10s linear infinite;
-  will-change: transform;
-  width: max-content;
-  z-index: 1;
+.radiobutton-container{
+     display: flex;
+     align-items: center; 
+     gap: 10px; 
+     flex-wrap: wrap;
+}
+.span-1{
+    font-size: 0.7rem; 
+    color: #555;
 }
 
-.carousel-track:hover {
-  animation-play-state: paused;
+.radiobutton{
+    display: flex; 
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+}
+.radiobutton label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.radiobutton input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes moveLeft {
-  0% {
-    transform: translateX(7%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
-.carousel-track::after {
-  content: "";
-  display: flex;
-  gap: 50px;
-}
+
+
+
+
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea {
+      width: 600px;
+      height: 40px;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: border-color 0.3s;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group textarea:focus {
+      border-color: red;
+      outline: none;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 15px;
+    }
+
+    .radio-group label {
+      font-weight: 400;
+    }
+
+
+    .button-container{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background-color: darkred;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      color: green;
+    }
+
+   
 
 .main-overall-footer-section-container{
   padding-top: 140px;
@@ -356,20 +315,30 @@ i{
 }
 
 
-@media screen and (max-width: 1100px) {
-    nav .wrapper {
-        max-width: 1250px;
-        padding: 0 30px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 200px;
-    }
-    .overall-footer-section-container{
+
+
+
+
+
+
+
+
+@media screen and (max-width:1100px){
+   nav .wrapper {
+    max-width: 1250px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+
+}
+.overall-footer-section-container{
         gap: 100px;
 }
 }
+
 @media screen and (max-width: 1000px){
    nav .wrapper {
         max-width: 1250px;
@@ -380,7 +349,11 @@ i{
         justify-content: space-between;
         gap: 120px;
     }
+    .overall-footer-section-container{
+        gap: 70px;
 }
+}
+
 
 
 @media screen and (max-width: 970px) {
@@ -404,6 +377,9 @@ i{
     overflow-y: auto;
     z-index: 1000;
   }
+  nav .wrapper{
+    gap: 330px;
+  }
   #menuBtn:checked ~ .nav-links {
     left: 0%;
   }
@@ -414,10 +390,10 @@ i{
   .nav-links li a:hover {
     color: inherit;
   }
-  .startup-content-container{
-    flex-wrap: wrap;
-  }
-    .overall-footer-section-container{
+  .overall-feedback-section-container {
+    padding-left: 20px;
+}
+   .overall-footer-section-container{
     gap: 35px;
   }
   .location-and-company-container{
@@ -426,7 +402,12 @@ i{
 }
 
 
+
+
+
+
 @media screen and (max-width: 500px) {
+
  nav .wrapper{
     gap: 215px;
       padding: 10px 20px;
@@ -448,50 +429,73 @@ i{
   .wrapper .btn {
     font-size: 1.2rem;
   }
-  .inspo{
+  .customer{
     font-size: 1.5rem;
   }
-  .inspo-1{
+  .greetings{
+    font-size: 0.65rem;
+  }
+  .radiobutton{
+    gap: 5px;
+  }
+  .radiobutton-container{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .rating-group label{
+    font-size: 0.7rem;
+  }
+  .form-group label{
+    font-size: 0.7rem;
+  }
+  .form-group input[type="text"], .form-group textarea {
     width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+.overall-feedback-section-container {
+    padding-left: 20px;
+}
+      .feedback-container {
+        padding: 20px;
+        font-size: 1.4rem;
+      }
+
+      .submit-btn{
+    padding: 10px 12px;
+    font-size: 0.7rem;
   }
-  .mission-content-container{
-    height: auto;
-    padding-bottom: 10px;
-  }
-  .mission-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .mission-content h1{
-    font-size: 1rem;
- 
-  }
-  .mission-content p{
-       width: 300px;
-  }
-  .path-content h1{
-    font-size: 1rem;
-  }
-  .startup-content-container{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .passion-container h1{
-    font-size: 1rem;
-  }
-  .overall-footer-section-container{
+   .overall-footer-section-container{
     flex-wrap: wrap;
     height: auto;
     padding-bottom: 20px;
   }
 }
 
+
 @media screen and (max-width: 400px) {
      nav .wrapper{
     gap: 115px;
       padding: 10px 20px;
  }
+   .form-group input[type="text"], .form-group textarea {
+    width: 250px;
+}
+.rating-group label{
+    font-size: 0.65rem;
+  }
+  .form-group label{
+    font-size: 0.65rem;
+  }
+  .submit-btn{
+    padding: 8px 10px;
+    font-size: 0.7rem;
+  }
+  
 }
