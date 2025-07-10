@@ -154,12 +154,166 @@ section:nth-child(2) h1 {
   display: none;
 }
 .overall-category-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding-top: 50px;
 }
+
+ /* Popup Styles */
+    .popup-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-section.active {
+      display: flex;
+    }
+
+    .popup-outer {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      overflow-y: auto;
+    }
+
+    .popup-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 500px;
+      max-width: 90vw;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.3s ease;
+    }
+
+    .close:hover {
+      color: #333;
+    }
+
+    .popup-box h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .popup-box p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .popup-box a {
+      color: red;
+      text-decoration: none;
+    }
+
+    .popup-box a:hover {
+      text-decoration: underline;
+    }
+
+    .form-container {
+      margin-bottom: 25px;
+    }
+
+    .form-container h1 {
+      font-size: 0.8rem;
+      color: #333;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+    }
+
+    .contact-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .email-container {
+      margin-bottom: 15px;
+    }
+
+    .event-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .event-container-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus {
+      outline: none;
+      border-color: red;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    }
+
+    .button-3-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button-3 {
+      background-color: red;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-3:hover {
+      background-color: black;
+    }
+
 .carousel-container {
   position: relative;
   width: 100%;
@@ -320,7 +474,6 @@ section:nth-child(2) h1 {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-bottom: 50px;
 }
 .overall-product-container {
   width: 240px;
@@ -382,14 +535,264 @@ section:nth-child(2) h1 {
   background-color: red;
   color: white;
 }
-.mini-product-container-1{
-    display: flex;
-    gap: 20px;
-}
-.mini-product-container-2{
-    display: flex;
-    gap: 20px;
-}
+
+.modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .form-container-1 {
+      max-width: 800px;
+      width: 90%;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      padding: 30px 20px;
+      position: relative;
+      animation: slideUp 0.5s ease-out;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .exit-button {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 1.8rem;
+      color: #999;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .exit-button:hover {
+      color: red;
+    }
+
+    .form-header-1 h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .form-header-1 p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      margin: 25px 0 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-row,
+    .form-row-three {
+      display: grid;
+      gap: 15px;
+    }
+
+    .form-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row-three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 2px solid #e1e5e9;
+      border-radius: 8px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: red;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .radio-item, .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .budget-display {
+      font-weight: 600;
+      color: red;
+      margin-bottom: 5px;
+    }
+
+    .submit-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .submit-btn {
+      background: red;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      color: #333;
+    }
+
+
+     .modal-overlay-2 {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .form-container-2 {
+      background: #fff;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 20px;
+      padding: 30px 20px;
+      position: relative;
+      overflow-y: auto;
+      max-height: 90vh;
+      animation: fadeInUp 0.5s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .exit-button {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 1.5rem;
+      color: #aaa;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .exit-button:hover {
+      color: red;
+    }
+
+    .form-header-2 h1 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-header-2 p {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 0.9rem;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #ff5e5e;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+    }
+   
+
+    .button-content-container{
+      display: flex;
+      justify-content: center;
+    }
+    .submit-btn {
+      display: block;
+      width: 200px;
+      padding: 12px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .submit-btn:hover {
+      background: darkred;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+      color: green;
+    }
 .overall-profile-container{
     display: flex;
     justify-content: center;
@@ -624,7 +1027,7 @@ section:nth-child(2) h1 {
   }
      .overall-product-section-container{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 30px;
@@ -664,6 +1067,37 @@ section:nth-child(2) h1 {
     gap: 30px;
   }
 }
+@media (max-width: 600px) {
+      .popup-box {
+        width: 95%;
+        padding: 10px;
+      }
+
+      .popup-box h1 {
+        font-size: 1rem;
+      }
+
+      .form-container h1 {
+        font-size: 0.8rem;
+      }
+      .form-container-1 {
+    max-width: 700px;
+    padding: 25px 15px;
+  }
+
+  .form-row-three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-header-1 h1 {
+    font-size: 1.3rem;
+  }
+
+  .submit-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+    }
 
 @media screen and (max-width: 500px) {
   .wrapper .logo a {
@@ -901,6 +1335,37 @@ section:nth-child(2) h1 {
 .social-media{
   padding-top: 30px;
 }
+  .form-container-1 {
+    max-width: 95%;
+    padding: 20px 15px;
+  }
+
+  .form-row,
+  .form-row-three {
+    grid-template-columns: 1fr;
+  }
+
+  .form-header-1 h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .form-header-1 p {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .exit-button {
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -924,6 +1389,31 @@ section:nth-child(2) h1 {
    .profile p{
     font-size: 0.7rem;
     width: 250px;
+  }
+  .form-header-1 h1 {
+    font-size: 1.1rem;
+  }
+
+  .form-header-1 p {
+    font-size: 0.8rem;
+  }
+
+  input, select, textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+ 
+
+  .budget-display {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+  }
+  .fa-solid{
+    color: white;
   }
 }
 @media (max-width: 380px) and (min-width: 360px) {
