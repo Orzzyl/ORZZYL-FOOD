@@ -67,9 +67,9 @@ nav .wrapper {
   display: none;
 }
 .button {
-  width: 100px;
+  width: 150px;
   height: 40px;
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: red;
   color: white;
   border: none;
@@ -943,7 +943,29 @@ section:nth-child(2) h1 {
 }
 
 
+@media screen and (max-width: 1100px) {
+    nav .wrapper {
+        max-width: 1250px;
+        padding: 0 30px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 110px;
+    }
+}
 
+@media screen and (max-width: 1000px){
+   nav .wrapper {
+        max-width: 1250px;
+        padding: 0 30px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 70px;
+    }
+}
 
 
 @media screen and (max-width: 970px) {
