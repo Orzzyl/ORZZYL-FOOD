@@ -79,7 +79,34 @@ nav .wrapper {
   background-color: white;
   color: black;
 }
-.button-4{
+.shopping {
+  position: relative;
+  text-align: right;
+}
+.shopping span {
+  background-color: white;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  position: absolute;
+  top: -5px;
+  left: 60%;
+  font-size: 0.7rem;
+}
+.button-1 {
+  background-color: red;
+  height: 40px;
+  width: 70px;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+.button-4 {
   width: 150px;
   height: 42px;
   background-color: red;
@@ -92,36 +119,11 @@ nav .wrapper {
   background-color: white;
   color: black;
 }
-.order-info-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px;
-}
-.order-info{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.order-info h1{
-    font-size: 3.5rem;
-    text-align: center;
-    width: 520px;
-    margin:0;
-}
-.order-info p{
-  font-size: 1rem;
-}
-.image-1-container img{
-    height: 400px;
-}
 
-.overall-savory-container{
+.overall-savory-container {
   padding-top: 70px;
 }
-.savory-container{
+.savory-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,36 +134,39 @@ nav .wrapper {
   padding-bottom: 20px;
   text-align: center;
 }
-.savory-content h1{
+.savory-content h1 {
   font-size: 3.5rem;
   margin: 0;
 }
-.savory-content p{
+.savory-content p {
   font-size: 1rem;
   margin: 0;
   padding-bottom: 10px;
 }
-.search-bar{
+.search-bar {
   padding-top: 30px;
 }
-.search{
+.search {
   width: 400px;
   height: 40px;
   border-radius: 30px;
-  border:none;
+  border: none;
   padding: 5px;
-  box-shadow: 0 4px 8px 0 rgba(242, 139, 139, 0.2), 0 6px 20px 0 rgba(186, 176, 176, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(242, 139, 139, 0.2),
+    0 6px 20px 0 rgba(186, 176, 176, 0.19);
   text-indent: 40px;
 }
-.search::placeholder{
+.search::placeholder {
   font-size: 0.8rem;
   padding: 30px;
 }
-input:focus{
+input:focus {
   outline: none;
 }
-
-.overall-steak-container{
+.steak{
+    text-align: center;
+}
+.overall-steak-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -179,88 +184,87 @@ input:focus{
   }
 }
 .menu-card {
-      background-color: #1c1c1c;
-      border-radius: 16px;
-      overflow: hidden;
-      width: 280px;
-      color: #fff;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-         animation: fadeInUp 0.6s ease forwards;
+  background-color: #1c1c1c;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 280px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 0.6s ease forwards;
   opacity: 0; /* Initial state for animation */
   transform: translateY(30px) scale(0.96);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+}
 .menu-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-    .image-wrapper {
-      position: relative;
-    }
+.image-wrapper {
+  position: relative;
+}
 
-    .image-wrapper img {
-      width: 100%;
-      height: 250px;
-      display: block;
-      object-fit: cover;
-    }
+.image-wrapper img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+}
 
-    .image-wrapper svg {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 6px;
-      border-radius: 50%;
-    }
+.image-wrapper svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  border-radius: 50%;
+}
 
-    .content {
-      padding: 10px;
-    }
+.content {
+  padding: 10px;
+}
 
-    .content h1 {
-      font-size: 1rem;
-      margin: 0;
-    }
+.content h1 {
+  font-size: 1rem;
+  margin: 0;
+}
 
-    .content p.description {
-      font-size: 0.7rem;
-      color: #bbb;
-      margin: 0;
-      padding-top: 5px;
-    }
+.content p.description {
+  font-size: 0.7rem;
+  color: #bbb;
+  margin: 0;
+  padding-top: 5px;
+}
 
-    
-    .price {
-      font-size: 1rem;
-      font-weight: 600;
-      color: white;
-      margin: 0;
-      padding-top: 15px;
-    }
+.price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  padding-top: 15px;
+}
 
-    .controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 15px;
-      gap: 10px;
-    }
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
 
-    .controls button {
-      background-color: red;
-      color: white;
-      border: none;
-      padding: 6px 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-      width: 150px;
-      transition: background 0.2s ease;
-    }
+.controls button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 150px;
+  transition: background 0.2s ease;
+}
 
-    .controls button,
+.controls button,
 .add-btn {
   transition: transform 0.15s ease-in-out;
 }
@@ -268,59 +272,62 @@ input:focus{
 .add-btn:active {
   transform: scale(0.92);
 }
-    .controls button:hover {
-      background-color: #555;
-    }
+.controls button:hover {
+  background-color: #555;
+}
 
-    .controls span {
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
+.controls span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
 
-  .controls .add-btn {
-      flex: 1;
-      margin-left: 8px;
-    }
+.controls .add-btn {
+  flex: 1;
+  margin-left: 8px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.checkout-display {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1c1c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+  max-width: 300px;
+}
+.cartitems{
+    list-style:none;
+     padding:0;
+}
 
 @media screen and (max-width: 1100px) {
-    nav .wrapper {
-        max-width: 1250px;
-        padding: 0 30px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 110px;
-    }
+  nav .wrapper {
+    max-width: 1250px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 110px;
+  }
 }
 
-@media screen and (max-width: 1000px){
-   nav .wrapper {
-        max-width: 1250px;
-        padding: 0 30px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 70px;
-    }
+@media screen and (max-width: 1000px) {
+  nav .wrapper {
+    max-width: 1250px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+  }
 }
-
-
-
 
 @media screen and (max-width: 970px) {
   .wrapper .btn {
@@ -357,10 +364,19 @@ input:focus{
     background-color: red;
     color: white;
   }
+  .button-1 {
+    background-color: red;
+    height: 30px;
+    width: 50px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
 }
 
-@media screen and (max-width: 500px){
-    .wrapper .logo a {
+@media screen and (max-width: 500px) {
+  .wrapper .logo a {
     color: #ffff;
     text-decoration: none;
     font-size: 1rem;
@@ -378,37 +394,25 @@ input:focus{
   }
   .wrapper .btn {
     font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
   }
-  .order-info-container{
-    flex-direction: column;
-    padding-top: 30px;
-    gap: 20px;
-  }
-  .order-info h1{
+  .savory-content h1 {
     font-size: 2rem;
-    width: 270px;
   }
-  .order-info p{
-    font-size: 0.7rem;
-    text-align: center;
-  }
-  .image-1-container img {
-    height: 200px;
-}
-.savory-content h1{
-  font-size: 2rem ;
-}
-.savory-content p {
+  .savory-content p {
     font-size: 0.7rem;
     margin: 0;
     padding-bottom: 10px;
-}
-.search {
+  }
+  .search {
     width: 230px;
     height: 30px;
     text-indent: 20px;
   }
-  .search::placeholder{
+  .search::placeholder {
     padding: 10px;
   }
 }
