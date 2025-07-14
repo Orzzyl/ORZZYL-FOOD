@@ -562,7 +562,7 @@ input::placeholder{
 
 @media screen and (max-width: 400px) {
      nav .wrapper{
-    gap: 250px;
+    gap: 185px;
       padding: 10px 20px;
  }
  .discover{

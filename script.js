@@ -101,3 +101,9 @@ function openPopup() {
     cookingForm.scrollIntoView({ behavior: "smooth" });
   });
 
+
+  
+
+document.getElementById('orderBtn').addEventListener('click', function() {
+    window.location.href = 'order.html';
+});

@@ -1,0 +1,168 @@
+body{
+  background-color: #121212;
+  color: white;
+  font-size: 0.8rem;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+nav {
+     width: 1140px;
+    max-width: 80%;
+  z-index: 999;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 70px;
+    z-index: 100;
+}
+nav .wrapper {
+  max-width: 1250px;
+  padding: 0 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 300px;
+}
+.wrapper .logo a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.span {
+  color: red;
+}
+.wrapper .nav-links {
+  display: inline-flex;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.nav-links li {
+  list-style-type: none;
+}
+.nav-links li a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 9px 15px;
+}
+.nav-links li a:hover {
+  color: red;
+}
+.wrapper .btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+}
+.input {
+  display: none;
+}
+i{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 970px){
+     nav .wrapper{
+    gap: 500px;
+      padding: 10px 20px;
+ }
+  .wrapper .btn {
+    display: block;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    background-color: red;
+    display: block;
+    top: 0;
+    left: -100%;
+    line-height: 70px;
+    padding: 50px 20px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  #menuBtn:checked ~ .nav-links {
+    left: 0%;
+  }
+  .nav-links li a {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .nav-links li a:hover {
+    color: inherit;
+  }
+  i{
+    color: white;
+}
+ }
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+ nav .wrapper{
+    gap: 215px;
+      padding: 10px 20px;
+ }
+  
+  .wrapper .logo a {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 280px;
+    z-index: 1000;
+  }
+  .wrapper .btn {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+     nav .wrapper{
+    gap: 250px;
+      padding: 10px 20px;
+ }
+}

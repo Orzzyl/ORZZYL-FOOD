@@ -951,10 +951,20 @@ section:nth-child(2) h1 {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 110px;
+        gap: 115px;
     }
+    .overall-footer-section-container{
+        gap: 100px;
+} 
+.wrapper .logo a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .nav-links li a{
+    font-size: 0.7rem;
+  }
 }
-
 @media screen and (max-width: 1000px){
    nav .wrapper {
         max-width: 1250px;
@@ -963,9 +973,16 @@ section:nth-child(2) h1 {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 70px;
+        gap: 85px;
     }
+        .overall-footer-section-container{
+        gap: 65px;
+} 
+i{
+  color: white;
 }
+}
+
 
 
 @media screen and (max-width: 970px) {
