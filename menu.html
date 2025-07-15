@@ -28,7 +28,7 @@
             <li><a href="restaurant.html">Restaurant</a></li>
             <li><a href="feedback.html">Feedback</a></li>
             <li><a href="menu.html">Menu</a></li>
-            <li><button class="button" type="button">Log In</button></li>
+            <li><button class="button" type="button" id="loginBtn">Log In</button></li>
           </ul>
           <label for="menuBtn" class="btn menu-btn"
             ><i class="fa-solid fa-bars"></i
@@ -74,7 +74,10 @@
     <script>
 
 document.getElementById('orderBtn').addEventListener('click', function() {
-    window.location.href = 'order.html';
+    window.location.href = 'login.html';
+});
+document.getElementById('loginBtn').addEventListener('click', function() {
+    window.location.href = 'login.html';
 });
     </script>
 </body>

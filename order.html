@@ -47,7 +47,7 @@
     </section>
 
 
-
+ <h2 class="greetings">Welcome, <span id="username"></span></h2>
       <section class="overall-savory-container">
  <section class="savory-container">
 
@@ -1419,7 +1419,7 @@
   <ul id="cartItems" class="cartitems"></ul>
   <p>Total: <span id="cartTotal">#0</span></p>
   <button id="checkoutBtn" class="button-4">Checkout</button>
-  <button onclick="document.getElementById('cartModal').style.display='none'" class="button-4" style="margin-top:10px;">Close</button>
+  <button onclick="document.getElementById('cartModal').style.display='none'" class="button-4">Close</button>
 </div>
 
 <div id="checkoutFormModal" class="checkout-display">
@@ -1443,6 +1443,7 @@
 
 
 <script>
+  
   document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.menu-card');
     const cart = {};
@@ -1633,6 +1634,7 @@
   function closeModal(id) {
     document.getElementById(id).style.display = 'none';
   }
+  
 </script>
 
 
