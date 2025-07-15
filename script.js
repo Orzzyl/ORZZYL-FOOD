@@ -105,5 +105,5 @@ function openPopup() {
   
 
 document.getElementById('orderBtn').addEventListener('click', function() {
-    window.location.href = 'order.html';
+    window.location.href = 'login.html';
 });
