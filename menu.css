@@ -142,6 +142,7 @@ color: white;
   justify-content: center;
   align-items: center;
   padding-top: 30px;
+  padding-bottom: 20px;
 }
 .popular-dishes-container{
   display: flex;
@@ -149,10 +150,12 @@ color: white;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border-color: red;
-  border: 2px solid;
-  width: 1200px;
+  border: 2px solid red;
+  max-width: 1200px;
   padding-bottom: 20px;
+  width: 100%;
+  overflow: hidden;
+
 }
  .popular-dishes-section{
   display: flex;
