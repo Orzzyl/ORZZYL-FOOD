@@ -1,4 +1,4 @@
-body {
+  body {
   background-color: #121212;
   color: white;
   font-size: 0.8rem;
@@ -136,11 +136,163 @@ color: white;
   justify-content: center;
   gap: 10px;
 }
- 
+.overall-popular-dishes-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.popular-dishes-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-color: red;
+  border: 2px solid;
+  width: 1200px;
+  padding-bottom: 20px;
+}
+ .popular-dishes-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+ }
+ .discover-container-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 720px;
+ }
+ .discover-container-1 p{
+  margin: 0;
+  padding-top: 20px;
+ }
+  .discover-container-1 h1{
+  margin: 0;
+  padding-bottom: 20px;
+ }
+.image-2-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+}
+.image-2-container img{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-out forwards;
+}
+.name_1{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+  gap: 140px;
+  padding-top: 10px;
+}
+.name_1 h1{
+  font-size: 0.8rem;
+  margin: 0;
+}
+.name_1 p{
+  font-size: 0.8rem;
+  margin: 0;
+}
+.image-2-container p{
+  font-size: 0.8rem;
+  width: 300px;
+}
 
 
 
+.image-3-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+}
+.image-3-container img{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+   animation: fadeIn 1s ease-out forwards;
+}
+.name-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 180px;
+  padding-top: 10px;
+}
+.name-2 h1{
+  font-size: 0.8rem;
+  margin: 0;
+}
+.name-2 p{
+  font-size: 0.8rem;
+  margin: 0;
+}
+.image-3-container p{
+  font-size: 0.8rem;
+  width: 300px;
+}
 
+
+.image-4-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+}
+.image-4-container img{
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+   animation: fadeIn 1s ease-out forwards;
+}
+.name-3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+  padding-top: 10px;
+}
+.name-3 h1{
+  font-size: 0.8rem;
+  margin: 0;
+}
+.name-3 p{
+  font-size: 0.8rem;
+  margin: 0;
+}
+.image-4-container p{
+  font-size: 0.8rem;
+  width: 300px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
@@ -159,7 +311,10 @@ color: white;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 110px;
+        gap: 85px;
+    }
+    .popular-dishes-container{
+      width: 1000px;
     }
 }
 
@@ -213,6 +368,33 @@ color: white;
     background-color: red;
     color: white;
   }
+  .order-info-container{
+    padding-top: 0;
+  }
+  .order-info h1{
+    font-size: 3rem;
+    width: 410px;
+  }
+  .order-info p{
+    font-size: 0.8rem;
+  }
+  .image-1-container img{
+    height: 340px;
+  }
+  .discover-container-1{
+    padding-right: 25px;
+  }
+  .popular-dishes-container{
+    width: 740px;
+  }
+   .popular-dishes-section {
+    flex-direction: column; /* Stack vertically instead */
+    width: 100%;            /* Use full width of container */
+    align-items: center;
+  }
+  .image-2-container {
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 500px){
@@ -250,6 +432,9 @@ color: white;
   }
   .image-1-container img {
     height: 200px;
+}
+.popular-dishes-container{
+  width: 310px;
 }
 
 }
