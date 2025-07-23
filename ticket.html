@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grand Tasting Affair | Ticket Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background: #1c1c1c;
+      padding: 25px;
+      border: 2px solid red;
+      border-radius: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: none;
+      background: #2a2a2a;
+      color: #fff;
+    }
+
+    .price-display {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #f2f2f2;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: red;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #ticketCard {
+      display: none;
+      background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
+      border: 2px solid red;
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      margin: 40px auto 20px;
+      text-align: center;
+    }
+
+    #ticketCard h2 {
+      color: red;
+    }
+
+    .qr-code {
+      margin: 15px auto;
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      border-radius: 10px;
+      border: 1px solid #444;
+    }
+
+    .download-btn {
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .event-message {
+      margin-top: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 10px;
+      }
+
+      form, #ticketCard {
+        width: 100%;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .price-display {
+        font-size: 1rem;
+      }
+
+      button, .download-btn {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Grand Tasting Affair - Get A Ticket</h1>
+
+<form id="ticketForm">
+  <label for="name">Full Name</label>
+  <input type="text" id="name" required />
+
+  <label for="duration">Pass Type</label>
+  <select id="duration" required onchange="updatePrice()">
+    <option value="">Select Duration</option>
+    <option value="onetime">One-Time Pass</option>
+    <option value="throughout">Throughout Event</option>
+  </select>
+
+  <label for="ticketType">Select Ticket Type</label>
+  <select id="ticketType" required onchange="updatePrice()">
+    <option value="">Select Ticket</option>
+    <option value="VIP">VIP Access</option>
+    <option value="Regular">Regular Pass</option>
+    <option value="Early">Early Bird</option>
+    <option value="Chef">Chef's Table</option>
+    <option value="Tasting">Tasting Only</option>
+  </select>
+
+  <div class="price-display" id="priceDisplay">Price: ₦0</div>
+
+  <button type="submit">Pay</button>
+</form>
+
+<div id="ticketCard">
+  <h2>Grand Tasting Affair</h2>
+  <p><strong>Name:</strong> <span id="guestName"></span></p>
+  <p><strong>Ticket:</strong> <span id="ticketName"></span></p>
+  <p><strong>Duration:</strong> <span id="ticketDuration"></span></p>
+  <p><strong>Price:</strong> ₦<span id="ticketAmount"></span></p>
+  <p><strong>Date:</strong> <span id="eventDate"></span></p>
+  <p><strong>Venue:</strong> Orzzyl Royale Banquet Hall, VI</p>
+  <div class="qr-code" id="qrCode"></div>
+  <div id="ticketFooter">
+    <button class="download-btn" onclick="downloadTicket()">Download Ticket</button>
+  </div>
+</div>
+
+<script>
+  const ticketPrices = {
+    onetime: {
+      VIP: 150000,
+      Regular: 30000,
+      Early: 20000,
+      Chef: 40000,
+      Tasting: 5000
+    },
+    throughout: {
+      VIP: 250000,
+      Regular: 50000,
+      Early: 30000,
+      Chef: 80000,
+      Tasting: 15000
+    }
+  };
+
+  const dates = {
+    onetime: "June 25th, 2025",
+    throughout: "June 25th – July 1st, 2025"
+  };
+
+  let selectedPrice = 0;
+
+  function updatePrice() {
+    const duration = document.getElementById("duration").value;
+    const type = document.getElementById("ticketType").value;
+
+    if (duration && type) {
+      selectedPrice = ticketPrices[duration][type] || 0;
+      document.getElementById("priceDisplay").textContent = "Price: ₦" + selectedPrice.toLocaleString();
+    }
+  }
+
+  document.getElementById("ticketForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nameField = document.getElementById("name");
+    const durationField = document.getElementById("duration");
+    const typeField = document.getElementById("ticketType");
+
+    const name = nameField.value.trim();
+    const type = typeField.value;
+    const duration = durationField.value;
+
+    if (!name || !type || !duration) {
+      alert("Please fill all fields.");
+      return;
+    }
+
+    document.getElementById("guestName").textContent = name;
+    document.getElementById("ticketName").textContent = typeField.options[typeField.selectedIndex].text;
+    document.getElementById("ticketDuration").textContent = duration === "onetime" ? "One-Time" : "Throughout";
+    document.getElementById("ticketAmount").textContent = selectedPrice.toLocaleString();
+    document.getElementById("eventDate").textContent = dates[duration];
+
+    const qrData = `${name} | ${type} | ${duration} | ₦${selectedPrice}`;
+    document.getElementById("qrCode").style.backgroundImage =
+      `url('https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent(qrData)}')`;
+
+    document.getElementById("ticketCard").style.display = "block";
+    document.getElementById("ticketCard").scrollIntoView({ behavior: 'smooth' });
+
+    // Reset form
+    nameField.value = '';
+    durationField.selectedIndex = 0;
+    typeField.selectedIndex = 0;
+    document.getElementById("priceDisplay").textContent = "Price: ₦0";
+  });
+
+  function downloadTicket() {
+  html2canvas(document.getElementById("ticketCard")).then(canvas => {
+    const link = document.createElement("a");
+    link.download = "Grand_Tasting_Ticket.png";
+    link.href = canvas.toDataURL();
+    link.click();
+
+    // Replace download button with message
+    document.getElementById("ticketFooter").innerHTML = '<div class="event-message">🎉 See you at the event!</div>';
+
+    // Auto-hide the ticket after 10 seconds
+    setTimeout(() => {
+      document.getElementById("ticketCard").style.display = "none";
+    }, 10000);
+  });
+}
+
+</script>
+
+</body>
+</html>

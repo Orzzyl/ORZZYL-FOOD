@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Single Image Moving Background</title>
+  <title>Orzzyl Food</title>
   <style>
     html, body {
       margin: 0;
@@ -81,7 +81,7 @@
       width: 100vw;
       height: 100vh;
       background: rgba(0, 0, 0, 0.45); /* Adjust the opacity as needed */
-      z-index: 0;
+ pointer-events: none;
     }
 
     .content {
@@ -193,27 +193,67 @@
     .div-2 p {
       margin: 0;
     }
-
-    .div-3 {
+    .overall-div-3{
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
-    a {
-      text-align: center;
-      text-decoration: none;
+   
+    .div-3{
+      width: 100%;
+      min-height: 70px;
+      background-color: rgba(92, 89, 89, 0.6);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px); 
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: clamp(10px, 2vw, 15px);
+      border-radius: 10px;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(0.7rem, 1.5vw, 0.8rem);
       color: white;
-      font-size: clamp(0.8rem, 2vw, 1rem);
-      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      box-sizing: border-box;
+       position: relative;
+  z-index: 5;
+  pointer-events: auto;
+    } 
+    .div-3 a{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+     
     }
+    .book-ticket{
+      text-decoration: none;
+      padding: 10px 30px;
+       font-weight: bold;
+       color: white;
+       font-size: 1.3rem;
+       z-index: 5;
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;
+   width: 300px;
+    }
+     a {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+     }
 
+    .book-ticket:hover{
+      transform: scale(1.05);
+    }
     .slide-in {
       opacity: 0;
       transform: translateX(-100px);
       transition: all 0.6s ease;
     }
-
     .slide.active .slide-in {
       animation: slideInFromRight 2s ease forwards;
     }
@@ -258,7 +298,7 @@
         padding: clamp(15px, 3vw, 30px);
         margin-top: 2rem;
       }
-
+    
       .div-1 {
         width: calc(100vw - 2rem);
         margin: 0 auto;
@@ -354,9 +394,12 @@
           <h3>Capture the Moment at the Orzzyl Lounge:</h3>
           <p>Pose in front of our elegant backdrop and share your experience using #Orzzyl GTA 2025</p>
       </div>
-        <div class="div-1 div-3 slide-in">
-         <a href=""> Book A Ticket</a>
-      </div>
+      <div class="overall-div-3">    
+           <div class="div-1 div-3" style="position: relative; z-index: 5;">
+  <a href="ticket.html" class="book-ticket"style="z-index: 10; position: relative;" >Book A Ticket</a>
+</div>
+</div>
+
       </div>
     </div>
   </div>
@@ -405,9 +448,9 @@
           <h3>Chef Meet & Greet:</h3>
           <p>Get autographs, photos, and stories from the pros behind the plates</p>
       </div>
-        <div class="div-1 div-3 slide-in">
-         <a href=""> Book A Ticket</a>
-      </div>
+        <div class="div-3" style="position: relative; z-index: 5;">
+  <a href="ticket.html" class="book-ticket"style="z-index: 10; position: relative;" >Book A Ticket</a>
+</div>
       </div>
     </div>
   </div>
@@ -456,9 +499,9 @@
           <h3>Signature Cocktail Experience:</h3>
           <p>Discover handcrafted cocktails created by award-winning mixologists</p>
       </div>
-        <div class="div-1 div-3 slide-in">
-         <a href=""> Reserve VIP Pass</a>
-      </div>
+       <div class="div-3" style="position: relative; z-index: 5;">
+  <a href="ticket.html" class="book-ticket"style="z-index: 10; position: relative;" >Book A Ticket</a>
+</div>
       </div>
     </div>
   </div>
@@ -507,9 +550,9 @@
           <h3>Wine Tasting & Pairing:</h3>
           <p>Discover the art of wine selection and perfect food pairing combinations</p>
       </div>
-        <div class="div-1 div-3 slide-in">
-         <a href=""> Join Workshop</a>
-      </div>
+        <div class="div-3" style="position: relative; z-index: 5;">
+  <a href="ticket.html" class="book-ticket"style="z-index: 10; position: relative;" >Book A Ticket</a>
+</div>
       </div>
     </div>
   </div>
@@ -558,9 +601,9 @@
           <h3>Thank You Reception:</h3>
           <p>A heartfelt farewell with special gifts and memories to take home</p>
       </div>
-        <div class="div-1 div-3 slide-in">
-         <a href=""> Get Final Tickets</a>
-      </div>
+       <div class="div-3" style="position: relative; z-index: 5;">
+  <a href="ticket.html" class="book-ticket"style="z-index: 10; position: relative;" >Book A Ticket</a>
+</div>
       </div>
     </div>
   </div>
@@ -599,6 +642,7 @@ document.querySelectorAll('.prev-btn').forEach(btn => {
     document.getElementById("closeBtn").onclick = function () {
     window.location.href = "event.html";
   };
+  
 </script>
 
 </body>
