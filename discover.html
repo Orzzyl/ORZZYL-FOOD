@@ -310,7 +310,11 @@
           transform: translateY(50px);
         }
       }
-
+  @media (max-width: 510px) {
+        .slide-in{
+          transform: translateY(-10px);
+        }
+      }
     /* Very small screens */
     @media (max-width: 480px) {
       .content {
@@ -335,6 +339,9 @@
         /* width: calc(100vw - 1rem); */
         padding: 12px;
       }
+         .slide-in{
+          transform: translateY(50px);
+        }
     }
 
     /* Large screens */
