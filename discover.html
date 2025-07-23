@@ -324,7 +324,7 @@
                <button class="button next-btn" type="button" aria-label="chevron-right">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
           </button>
-              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='events.html'">
+              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='event.html'">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
           </button>
       </div>
@@ -375,7 +375,7 @@
                <button class="button next-btn" type="button" aria-label="chevron-right">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
           </button>
-              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='events.html'">
+              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='event.html'">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
           </button>
       </div>
@@ -426,7 +426,7 @@
                <button class="button next-btn" type="button" aria-label="chevron-right">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
           </button>
-              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='events.html'">
+              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='event.html'">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
           </button>
       </div>
@@ -477,7 +477,7 @@
                <button class="button next-btn" type="button" aria-label="chevron-right">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
           </button>
-              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='events.html'">
+              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='event.html'">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
           </button>
       </div>
@@ -528,7 +528,7 @@
                <button class="button next-btn" type="button" aria-label="chevron-right">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
           </button>
-              <button class="button-1" type="button" aria-label="close-button" onclick="window.location.href='event.html'">
+              <button class="button-1" type="button" aria-label="close-button" id="closeBtn">
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
           </button>
       </div>
@@ -594,6 +594,10 @@ document.querySelectorAll('.next-btn').forEach(btn => {
 document.querySelectorAll('.prev-btn').forEach(btn => {
     btn.addEventListener('click', prevSlide);
 });
+
+    document.getElementById("closeBtn").onclick = function () {
+    window.location.href = "event.html";
+  };
 </script>
 
 </body>
