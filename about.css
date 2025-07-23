@@ -354,7 +354,11 @@ i{
   text-align: center;
   padding-top: 20px;
 }
-
+@media screen and (max-width: 1300px){
+      .overall-footer-section-container{
+        gap: 100px;
+}
+}
 
 @media screen and (max-width: 1100px) {
     nav .wrapper {
