@@ -24,9 +24,9 @@ function openPopup() {
       return;
     }
 
-    // Here you would typically send the data to your server
-    alert('Thank you for your inquiry! We will get back to you soon.');
-    closePopup();
+    // // Here you would typically send the data to your server
+    // alert('Thank you for your inquiry! We will get back to you soon.');
+    // closePopup();
     
     // Reset form
     document.getElementById('name').value = '';
