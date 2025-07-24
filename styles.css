@@ -298,7 +298,7 @@ section:nth-child(2) h1 {
       margin-top: 20px;
     }
 
-    .button-3 {
+    #button-3 {
       background-color: red;
       color: white;
       padding: 12px 30px;
@@ -310,7 +310,7 @@ section:nth-child(2) h1 {
       transition: background-color 0.3s ease;
     }
 
-    .button-3:hover {
+    #button-3:hover {
       background-color: black;
     }
 
@@ -667,9 +667,12 @@ section:nth-child(2) h1 {
     .submit-section {
       text-align: center;
       margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .submit-btn {
+    #submit-btn {
       background: red;
       color: #fff;
       border: none;
@@ -770,7 +773,7 @@ section:nth-child(2) h1 {
       display: flex;
       justify-content: center;
     }
-    .submit-btn {
+    #submit-btn {
       display: block;
       width: 200px;
       padding: 12px;
@@ -783,7 +786,7 @@ section:nth-child(2) h1 {
       margin-top: 20px;
     }
 
-    .submit-btn:hover {
+    #submit-btn:hover {
       background: darkred;
     }
 
@@ -1132,7 +1135,7 @@ i{
     font-size: 1.3rem;
   }
 
-  .submit-btn {
+  #submit-btn {
     padding: 10px 24px;
     font-size: 0.95rem;
   }
@@ -1400,7 +1403,7 @@ i{
     font-size: 1.5rem;
   }
 
-  .submit-btn {
+  #submit-btn {
     width: 100%;
     padding: 12px;
   }
@@ -1448,7 +1451,7 @@ i{
     font-size: 0.9rem;
   }
 
-  .submit-btn {
+  #submit-btn {
     font-size: 0.9rem;
   }
   .fa-solid{
