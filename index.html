@@ -10,6 +10,7 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
   </head>
   <body>
     <section>
@@ -259,23 +260,23 @@
 
       <div class="form-container">
         <h1>CONTACT INFORMATION</h1>
-        <form>
+        <form action="https://send.pageclip.co/O5Pgh9bSVSkCeJFcpwFJJKCteAtpeZEn" class="pageclip-form" method="post">
           <div class="contact-1">
             <label for="name">Name
-              <input type="text" id="name" placeholder="E.g Favour" required>
+              <input type="text" id="name" name="Name"  placeholder="E.g Favour" required>
             </label>
             
             <label for="phone">Phone number
-              <input type="text" id="phone" placeholder="09087654321" maxlength="11" required>
+              <input type="text" id="phone" name="Phonenumber"  placeholder="09087654321" maxlength="11" required>
             </label>
           </div>
 
           <div class="email-container">
             <label for="email">Email
-              <input type="email" id="email" placeholder="E.g favour01@gmail.com" required>
+              <input type="email" id="email" name="Email" placeholder="E.g favour01@gmail.com" required>
             </label>
           </div>
-        </form>
+      
       </div>
 
       <div class="form-container">
@@ -283,27 +284,28 @@
         <form class="event-container">
           <div class="event-container-1">
             <label for="eventType">What type of event are you planning?
-              <input type="text" id="eventType" placeholder="E.g Wedding" required>
+              <input type="text" id="eventType" name="Event-Type" placeholder="E.g Wedding" required>
             </label>
             
             <label for="guests">How many guests are you expecting?
-              <input type="text" id="guests" placeholder="Input number" required>
+              <input type="text" id="guests" name="Number of guests" placeholder="Input number" required>
             </label>
           </div>
           
           <label for="eventDate">Event date
-            <input type="date" id="eventDate" required>
+            <input type="date" name="Event Date" id="eventDate" required>
           </label>
           
           <label for="eventLocation">Event Location
-            <input type="text" id="eventLocation" placeholder="e.g Lekki Phase 1, Ikoyi, Ikeja" required>
+            <input type="text" id="eventLocation" name="Event Location" placeholder="e.g Lekki Phase 1, Ikoyi, Ikeja" required>
           </label>
         </form>
       </div>
 
       <div class="button-3-container">
-        <button type="button" class="button-3" onclick="submitForm()">Submit</button>
+        <button type="button" class="button-3 pageclip-form__submit" onclick="submitForm()"><span>Submit</span></button>
       </div>
+        </form>
     </div>
   </div>
 </section>
@@ -317,7 +319,7 @@
         <p>Please fill the form to help us plan your event tailored to your vision.</p>
       </div>
 
-      <form id="eventForm">
+      <form id="eventForm" action="https://send.pageclip.co/O5Pgh9bSVSkCeJFcpwFJJKCteAtpeZEn" class="pageclip-form" method="post">
         <h2 class="section-title">Contact Information</h2>
         <div class="form-row">
           <div class="form-group">
@@ -419,7 +421,7 @@
         </div>
 
         <div class="submit-section">
-          <button type="submit" class="submit-btn">Submit</button>
+          <button type="submit" class="submit-btn pageclip-form__submit"><span>Submit</span></button>
           <div class="success-message" id="successMessage">
             <h3>Thank you!</h3>
             <p>We will reach out shortly with a custom proposal.</p>
@@ -440,7 +442,7 @@
         <p>Fill out this form and we’ll reach out with available class options.</p>
       </div>
 
-      <form id="cookingForm">
+      <form id="cookingForm" action="https://send.pageclip.co/O5Pgh9bSVSkCeJFcpwFJJKCteAtpeZEn" class="pageclip-form" method="post">
         <div class="form-group">
           <label>Full Name</label>
           <input type="text" name="fullName" required />
@@ -488,7 +490,7 @@
         </div>
 
         <div class="button-content-container">
-        <button type="submit" class="submit-btn">Submit Inquiry</button>
+        <button type="submit" class="submit-btn pageclip-form__submit"><span>Submit Inquiry</span></button>
           </div>
         <div class="success-message" id="successMessage">
           <h3>Thank you!</h3>
@@ -599,5 +601,6 @@ Her culinary journey began with traditional Nigerian cuisine training at the Hot
  <p class="copyright">© 2025 Orzzyl Food. All rights reserved. | Reg. No: 12345678</p>
 </section>
 <script src="script.js"></script>
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
 </html>
